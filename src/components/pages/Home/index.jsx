@@ -1,5 +1,5 @@
 import styles from './Home.module.css';
-import family from '../../../imgs/5220.jpg';
+import family from '../../../imgs/family.png';
 import LinkButton from '../../LinkButton';
 
 export default function Home() {

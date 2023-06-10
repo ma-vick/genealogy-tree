@@ -1,11 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { parse, v4 as uuidv4 } from 'uuid';
 import { BsPlusSquare } from "react-icons/bs";
 
 import Relative from "../../Relative";
 
 import styles from "./Tree.module.css";
-import RelativeForm from "../../../RelativeForm";
+import RelativeForm from "../../RelativeForm";
+import Modal from "../../layout/Modal";
 
 export default function Tree() {
   const { id } = useParams();
@@ -26,6 +28,21 @@ export default function Tree() {
       .catch((err) => console.log(err));
   }, [id]);
 
+  function createRelative(){
+    fetch(`http://localhost:5000/trees/${tree.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(tree),
+    })
+    .then(res => res.json())
+    .then(data => {
+      setOpenModal(false);
+    })
+    .catch(err => console.log(err))
+  }
+
   return (
     <div className={styles.tree_container}>
       {tree ? (
@@ -36,12 +53,19 @@ export default function Tree() {
               <BsPlusSquare color="rgb(86, 9, 157)" size={28} />
             </button>
           </div>
-          <RelativeForm
+          <Modal 
             isOpen={openModal}
-            setOpenModal={() => setOpenModal(!openModal)}
-            btnText="Criar parente"
+            children={
+              <RelativeForm
+                isOpen={openModal}
+                setOpenModal={() => setOpenModal(!openModal)}
+                handleSubmit={createRelative}
+                btnText="Criar parente"
+                relativeData={tree}
+              />
+            }
           />
-          <div>
+          <div className={styles.relatives_container}>
             {tree.relatives.map((relative) => (
               <Relative key={relative.name} data={relative} />
             ))}

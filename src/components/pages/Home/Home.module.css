@@ -8,8 +8,13 @@
 .home_container h1 {
     color: rgb(86, 9, 157);
     margin: 2em 0 1em;
+    font-size: 1.8em;
 }
 
 .home_container img {
-    width: 480px;
+    width: 20em;
+}
+
+.home_container a {
+    margin-bottom: 5em;
 }

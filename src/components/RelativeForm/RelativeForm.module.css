@@ -26,6 +26,7 @@
     border: none;
     padding: .8em;
     border-radius: 8px;
+    background-color: #e7e7e7;
 }
 
 .gender select:focus {

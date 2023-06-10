@@ -15,3 +15,32 @@
     font-size: 2em;
     margin-bottom: 1.5em;
 }
+
+.options_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px; 
+}
+
+.options_container button {
+    font-size: 1em;
+    background-color: rgb(86, 9, 157);
+    border: none;
+    border-radius: .4em;
+    padding: .8em;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.options_container svg {
+    color: white;
+}
+
+.options_container button:hover {
+    background-color: rgb(214, 169, 255);
+}
+
+.options_container button:hover svg {
+    color: rgb(86, 9, 157);
+}

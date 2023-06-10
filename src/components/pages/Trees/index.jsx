@@ -7,9 +7,10 @@ import LinkButton from "../../layout/LinkButton";
 import empty from "../../../imgs/empty.png";
 
 import styles from "./Trees.module.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export default function Trees() {
+  const { id } = useParams();
   const [trees, setTrees] = useState([]);
 
   useEffect(() => {
@@ -26,6 +27,20 @@ export default function Trees() {
       .catch((err) => console.log(err));
   }, []);
 
+  function removeTree(id){
+    fetch(`http://localhost:5000/trees/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(res => res.json())
+    .then(data => {
+      setTrees(trees.filter(tree => tree.id !== id))
+    })
+    .catch(err => console.log(err))
+  }
+
   return (
     <main className={styles.trees_container}>
       <div className={styles.title_trees}>
@@ -34,7 +49,7 @@ export default function Trees() {
       </div>
       <div className={styles.treescards_container}>
         {trees.length > 0 &&
-          trees.map((tree) => <TreeCard name={tree.surname} id={tree.id} />)}
+          trees.map((tree) => <TreeCard name={tree.surname} id={tree.id} handleRemove={removeTree} />)}
       </div>
       {trees.length === 0 && (
         <div className={styles.empty_container}>

@@ -7,7 +7,7 @@
 .title_trees {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0 2em;
     width: 100%;
 }
@@ -31,10 +31,11 @@
 }
 
 .empty_container img {
-    width: 350px;
+    width: 13em;
     margin-bottom: 3em;
 }
 
-.empty_container p {
-    margin-bottom: 5em;
+.empty_container p,
+.empty_container a {
+    margin-bottom: 3em;
 }

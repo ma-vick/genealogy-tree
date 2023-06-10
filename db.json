@@ -27,41 +27,31 @@
               "birthday": "03/03/1996"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "surname": "Almeida",
-      "relatives": [
+        },
         {
-          "name": "Francisco",
-          "gender": "male",
-          "birthday": "12/11/1973",
-          "offspring": [
-            {
-              "name": "Victória",
-              "gender": "female",
-              "birthday": "20/04/2006"
-            },
-            {
-              "name": "Vanessa",
-              "gender": "female",
-              "birthday": "23/06/1998"
-            },
-            {
-              "name": "Waltinho",
-              "gender": "male",
-              "birthday": "10/04/1996"
-            }
-          ]
+          "name": "Edileuza",
+          "birthday": "1978-07-23",
+          "gender": "female"
+        },
+        {
+          "name": "Raiane",
+          "birthday": "1980-05-12",
+          "gender": "female"
+        },
+        {
+          "name": "José",
+          "birthday": "1960-08-20"
+        },
+        {
+          "name": "Júlio",
+          "birthday": "2002-12-12"
         }
       ]
     },
     {
       "surname": "Nespola",
       "relatives": [],
-      "id": "gmeB2j6"
+      "id": "JfBPGoH"
     }
   ]
 }

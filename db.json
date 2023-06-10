@@ -1,0 +1,67 @@
+{
+  "trees": [
+    {
+      "id": "1",
+      "surname": "Ferreira",
+      "relatives": [
+        {
+          "name": "Josefa",
+          "gender": "female",
+          "birthday": "06/10/1962",
+          "offspring": [
+            {
+              "name": "Victória",
+              "gender": "female",
+              "birthday": "20/04/2006"
+            }
+          ]
+        },
+        {
+          "name": "Cícera",
+          "gender": "female",
+          "birthday": "06/01/1974",
+          "offspring": [
+            {
+              "name": "Sara",
+              "gender": "female",
+              "birthday": "03/03/1996"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "surname": "Almeida",
+      "relatives": [
+        {
+          "name": "Francisco",
+          "gender": "male",
+          "birthday": "12/11/1973",
+          "offspring": [
+            {
+              "name": "Victória",
+              "gender": "female",
+              "birthday": "20/04/2006"
+            },
+            {
+              "name": "Vanessa",
+              "gender": "female",
+              "birthday": "23/06/1998"
+            },
+            {
+              "name": "Waltinho",
+              "gender": "male",
+              "birthday": "10/04/1996"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "surname": "Nespola",
+      "relatives": [],
+      "id": "gmeB2j6"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+.form_newrelative {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 12px;
+    margin: auto;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+.form_newrelative input {
+    background-color: #e7e7e7;
+    padding: 1em;
+    font-size: 1em;
+}
+
+.form_newrelative .gender {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.gender select {
+    border: none;
+    padding: .8em;
+    border-radius: 8px;
+}
+
+.gender select:focus {
+    outline: 2px solid rgb(86, 9, 157);
+}
+
+.form_newrelative button {
+    margin: 4em 5em 0;
+}

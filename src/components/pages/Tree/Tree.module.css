@@ -1,0 +1,22 @@
+.tree_container {
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    width: 80vw;
+    height: 100%;
+}
+
+.title_tree {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2em;
+    margin-bottom: 3em;
+    color: rgb(86, 9, 157);
+    width: 100%;
+}
+
+.title_tree button {
+    border: none;
+    cursor: pointer;
+}

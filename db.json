@@ -37,21 +37,13 @@
           "name": "Raiane",
           "birthday": "1980-05-12",
           "gender": "female"
-        },
-        {
-          "name": "José",
-          "birthday": "1960-08-20"
-        },
-        {
-          "name": "Júlio",
-          "birthday": "2002-12-12"
         }
       ]
     },
     {
       "surname": "Nespola",
       "relatives": [],
-      "id": "JfBPGoH"
+      "id": "1QECq4L"
     }
   ]
 }

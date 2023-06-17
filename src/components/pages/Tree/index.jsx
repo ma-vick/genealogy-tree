@@ -49,7 +49,7 @@ export default function Tree() {
         <>
           <div className={styles.title_tree}>
             <h1>{tree.surname}</h1>
-            <button onClick={() => setOpenModal(true)}>
+            <button onClick={() => setOpenModal(!openModal)}>
               <BsPlusSquare color="rgb(86, 9, 157)" size={28} />
             </button>
           </div>

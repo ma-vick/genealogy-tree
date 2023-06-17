@@ -18,7 +18,8 @@ export default function Relative({ data }) {
       <Modal isOpen={openModal} children={<Edit />} />
       <div onClick={options} className={styles.relative_container}>
         <div className={styles.relative_img}>
-          <img src={data.img} alt={data.name} />
+          {console.log(data.img)}
+          <img src={data.img && require(`../../imgs/${data.img}`)} alt={data.name} />
         </div>
         <h4>{data.name}</h4>
       </div>

@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { parse, v4 as uuidv4 } from 'uuid';
 import { BsPlusSquare } from "react-icons/bs";
 
 import Relative from "../../Relative";

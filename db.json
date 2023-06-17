@@ -8,6 +8,7 @@
           "name": "Josefa",
           "gender": "female",
           "birthday": "06/10/1962",
+          "img": "mainha.jpg",
           "offspring": [
             {
               "name": "Victória",
@@ -44,6 +45,11 @@
       "surname": "Nespola",
       "relatives": [],
       "id": "1QECq4L"
+    },
+    {
+      "surname": "Bindaco",
+      "relatives": [],
+      "id": "ML2ygkS"
     }
   ]
 }

@@ -1,4 +1,5 @@
 .relative_wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
 }

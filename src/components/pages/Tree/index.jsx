@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { BsPlusSquare } from "react-icons/bs";
 
@@ -12,6 +12,7 @@ export default function Tree() {
   const { id } = useParams();
   const [tree, setTree] = useState(null);
   const [openModal, setOpenModal] = useState(false);
+  const [relatives, setRelatives] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:5000/trees/${id}`, {
@@ -27,19 +28,42 @@ export default function Tree() {
       .catch((err) => console.log(err));
   }, [id]);
 
-  function createRelative(){
+  function createRelative() {
     fetch(`http://localhost:5000/trees/${tree.id}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(tree),
     })
-    .then(res => res.json())
-    .then(data => {
-      setOpenModal(false);
+      .then((res) => res.json())
+      .then((data) => {
+        setOpenModal(false);
+      })
+      .catch((err) => console.log(err));
+  }
+
+  function removeRelative(id) {
+    const relativesUpdated = tree.relatives.filter(
+      (relative) => relative.name !== id
+    );
+    const treeUpdated = tree;
+
+    treeUpdated.relatives = relativesUpdated;
+
+    fetch(`http://localhost:5000/trees/${treeUpdated.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(treeUpdated),
     })
-    .catch(err => console.log(err))
+      .then((res) => res.json())
+      .then((data) => {
+        setTree(treeUpdated);
+        setRelatives(relativesUpdated);
+      })
+      .catch((err) => console.log(err));
   }
 
   return (
@@ -52,7 +76,7 @@ export default function Tree() {
               <BsPlusSquare color="rgb(86, 9, 157)" size={28} />
             </button>
           </div>
-          <Modal 
+          <Modal
             isOpen={openModal}
             children={
               <RelativeForm
@@ -66,7 +90,7 @@ export default function Tree() {
           />
           <div className={styles.relatives_container}>
             {tree.relatives.map((relative) => (
-              <Relative key={relative.name} data={relative} />
+              <Relative key={relative.name} data={relative} handleRemove={() => removeRelative(relative.name)} />
             ))}
           </div>
         </>

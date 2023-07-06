@@ -1,13 +1,17 @@
 .editoptions_container {
-    display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
 }
 
 .editoptions {
-    background-color: white;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1em;
-    border: none;
-    border-radius: 8px;
-    margin-right: 20px;
-    font-size: .8em;
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+  margin-right: 20px;
+  font-size: 0.8em;
 }

@@ -27,7 +27,7 @@ export default function RelativeForm({ handleSubmit, btnText, relativeData }) {
         name="img"
         placeholder="Imagem"
         handleOnChange={handleChange}
-        value={relative.img ? relative.img : ""}
+        value={relative.img ? relative.img : ""}  
       />
       <Input
         text="Insira o nome"
